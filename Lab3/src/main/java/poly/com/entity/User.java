@@ -1,10 +1,9 @@
-package poly.entity;
+package poly.com.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import org.hibernate.annotations.Nationalized;
+
+import java.util.List;
 
 @Entity
 @Table(name = "Users")
@@ -25,6 +24,9 @@ public class User {
 
     @Column(name = "Admin", nullable = false)
     private Boolean admin;
+
+    @OneToMany(mappedBy = "user")
+    private List<Favorite> favorites;
 
     public String getId() {
         return id;

@@ -10,13 +10,11 @@ import poly.entity.User;
 import poly.dao.UserDao;
 import poly.dao.UserDaoImpl;
 
-
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 @WebServlet ({
-        "/user",
         "/user/crud/index",
         "/user/crud/edit/*",
         "/user/crud/create",
